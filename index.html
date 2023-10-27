@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+            .h11{
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 60px;
+                left: 200px;
+                
+            }
+            .h12,.h14{
+                width: 120px;
+                height: 40px;
+                position: absolute;
+                top: 10px;
+                left: 200px;
+                
+            }
+            .h13{
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 60px;
+                left: 240px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class = "h11">
+            ні
+        </h1>
+        <h1 class = "h12">
+            ти лох?
+        </h1>
+        <h1 class = "h13">
+            так
+        </h1>
+        <h1 class = "h14">
+            я знав)
+        </h1>
+        <script>
+            function rnum1(){
+                return Math.random()*400
+            }
+            function rnum2(){
+                return Math.random()*771
+            }
+            $(document).ready(function(){
+                $(".h14").hide()
+                
+                $(".h11").click(function(){
+                    $(".h11").css("top", rnum2() )
+                })
+
+                $(".h11").click(function(){
+                    $(".h11").css("left", rnum1() )
+                })
+
+                $(".h13").click(function(){
+                    $(".h13").hide()
+                })
+
+                $(".h13").click(function(){
+                    $(".h12").hide()
+                })
+
+                $(".h13").click(function(){
+                    $(".h11").hide()
+                })
+
+                $(".h13").click(function(){
+                    $(".h14").show()
+                })
+                
+            })
+        </script>
+    </body>
+</html>
